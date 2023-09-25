@@ -16,7 +16,7 @@
 */
 
 import QtQuick 2.0
-import QtQuick.XmlListModel 2.0
+//import QtQuick.XmlListModel 2.0
 import literm 1.0
 
 Item {
@@ -59,15 +59,15 @@ Item {
             NumberAnimation { duration: 100; easing.type: Easing.InOutQuad; }
         }
 
-        XmlListModel {
-            id: xmlModel
-            xml: Util.getUserMenuXml()
-            query: "/userMenu/item"
+//        XmlListModel {
+//            id: xmlModel
+//            xml: Util.getUserMenuXml()
+//            query: "/userMenu/item"
 
-            XmlRole { name: "title"; query: "title/string()" }
-            XmlRole { name: "command"; query: "command/string()" }
-            XmlRole { name: "disableOn"; query: "disableOn/string()" }
-        }
+//            XmlRole { name: "title"; query: "title/string()" }
+//            XmlRole { name: "command"; query: "command/string()" }
+//            XmlRole { name: "disableOn"; query: "disableOn/string()" }
+//        }
 
         Component {
             id: xmlDelegate

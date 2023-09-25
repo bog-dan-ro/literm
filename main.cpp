@@ -37,13 +37,13 @@ int main(int argc, char* argv[])
     QGuiApplication app(argc, argv);
 
     QScreen* sc = app.primaryScreen();
-    if (sc) {
-        sc->setOrientationUpdateMask(Qt::PrimaryOrientation
-            | Qt::LandscapeOrientation
-            | Qt::PortraitOrientation
-            | Qt::InvertedLandscapeOrientation
-            | Qt::InvertedPortraitOrientation);
-    }
+//    if (sc) {
+//        sc->setOrientationUpdateMask(Qt::PrimaryOrientation
+//            | Qt::LandscapeOrientation
+//            | Qt::PortraitOrientation
+//            | Qt::InvertedLandscapeOrientation
+//            | Qt::InvertedPortraitOrientation);
+//    }
 
     qmlRegisterType<TextRender>("literm", 1, 0, "TextRender");
     qmlRegisterUncreatableType<Util>("literm", 1, 0, "Util", "Util is created by app");

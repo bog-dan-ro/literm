@@ -16,7 +16,7 @@
 */
 
 import QtQuick 2.0
-import QtQuick.XmlListModel 2.0
+import QtQml.XmlListModel
 import literm 1.0
 
 Item {
@@ -61,12 +61,12 @@ Item {
 
         XmlListModel {
             id: xmlModel
-            xml: Util.getUserMenuXml()
+            source: Util.getUserMenuXml()
             query: "/userMenu/item"
 
-            XmlRole { name: "title"; query: "title/string()" }
-            XmlRole { name: "command"; query: "command/string()" }
-            XmlRole { name: "disableOn"; query: "disableOn/string()" }
+            XmlListModelRole  { name: "title"; elementName: "title/string()" }
+            XmlListModelRole  { name: "command"; elementName: "command/string()" }
+            XmlListModelRole  { name: "disableOn"; elementName: "disableOn/string()" }
         }
 
         Component {

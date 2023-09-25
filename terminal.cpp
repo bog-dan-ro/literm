@@ -418,7 +418,7 @@ void Terminal::keyPress(int key, int modifiers, const QString& text)
 
         if (asciiVal >= 0x41 && asciiVal <= 0x5f) {
             // Turn uppercase characters into their control code equivalent
-            toWrite.append(asciiVal - 0x40);
+            toWrite.append(char(asciiVal - 0x40));
         } else {
             qWarning() << "Ctrl+" << c << " does not translate into a control code";
         }

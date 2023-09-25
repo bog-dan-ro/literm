@@ -1,4 +1,5 @@
 QT = core gui qml quick
+QT += core5compat
 
 CONFIG -= app_bundle
 
@@ -11,11 +12,11 @@ TEMPLATE = app
 TARGET = literm
 DEPENDPATH += .
 INCLUDEPATH += .
-LIBS += -lutil
 
 # Input
 HEADERS += \
     ptyiface.h \
+    serialiface.h \
     terminal.h \
     textrender.h \
     version.h \
@@ -26,6 +27,7 @@ HEADERS += \
 
 SOURCES += \
     main.cpp \
+    serialiface.cpp \
     terminal.cpp \
     textrender.cpp \
     ptyiface.cpp \
